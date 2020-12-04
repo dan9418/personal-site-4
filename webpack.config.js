@@ -31,9 +31,9 @@ module.exports = {
 	resolve: {
 		extensions: ['*', '.jsx', '.js'],
 		alias: {
-			'react-hot-loader': path.resolve(path.join(__dirname, '../../node_modules/react-hot-loader')),
-			'react': path.resolve(path.join(__dirname, '../../node_modules/react')),
-			'react-dom': path.resolve(path.join(__dirname, '../../node_modules/@hot-loader/react-dom'))
+			'react-hot-loader': path.resolve(path.join(__dirname, './node_modules/react-hot-loader')),
+			'react': path.resolve(path.join(__dirname, './node_modules/react')),
+			'react-dom': path.resolve(path.join(__dirname, './node_modules/@hot-loader/react-dom'))
 		}
 	},
 	output: {

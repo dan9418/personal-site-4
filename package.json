@@ -1,8 +1,8 @@
 {
   "name": "personal-site-4",
   "version": "0.0.0",
-  "description": "Sandbox code for Play What",
-  "main": "",
+  "description": "Personal Site v4.0",
+  "main": "build/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --hot --inline --config webpack.config.js",
     "start-debug": "cross-env DEBUG='express:*' cross-env NODE_ENV=development webpack-dev-server --hot --config webpack.config.js",

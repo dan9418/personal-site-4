@@ -13,9 +13,10 @@ module.exports = () => ({ mode: 'development',
   resolve:
    { extensions: [ '*', '.jsx', '.js' ],
      alias:
-      { 'react-hot-loader': 'C:\\node_modules\\react-hot-loader',
-        react: 'C:\\node_modules\\react',
-        'react-dom': 'C:\\node_modules\\@hot-loader\\react-dom' },
+      { 'react-hot-loader': 'C:\\_dev\\personal-site-4\\node_modules\\react-hot-loader',
+        react: 'C:\\_dev\\personal-site-4\\node_modules\\react',
+        'react-dom':
+         'C:\\_dev\\personal-site-4\\node_modules\\@hot-loader\\react-dom' },
      unsafeCache: true,
      modules: [ 'node_modules' ],
      mainFiles: [ 'index' ],
