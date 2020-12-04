@@ -2,8 +2,7 @@ import React from 'react';
 import 'react-hot-loader';
 import { hot } from 'react-hot-loader/root';
 import {
-	BrowserRouter as Router,
-	Redirect, Route, Switch
+	BrowserRouter as Router, Link, Redirect, Route, Switch
 } from "react-router-dom";
 import './Main.css';
 import Art from "./pages/Art/Art";
@@ -38,17 +37,17 @@ const APP_LINKS = [
 	{
 		id: 'linkedin',
 		name: 'LinkedIn',
-		link: 'https://www.linkedin.com/in/danielbednarczyk/'
+		href: 'https://www.linkedin.com/in/danielbednarczyk/'
 	},
 	{
 		id: 'github',
 		name: 'GitHub',
-		link: 'https://github.com/dan9418/'
+		href: 'https://github.com/dan9418/'
 	},
 	{
 		id: 'bandcamp',
 		name: 'Bandcamp',
-		link: 'https://atlaseuphoria.bandcamp.com/'
+		href: 'https://atlaseuphoria.bandcamp.com/'
 	}
 ];
 
@@ -67,9 +66,40 @@ const getRoutes = () => {
 	return routes;
 }
 
+function getPageLinks() {
+	let pageLinks = [];
+	for (let i = 0; i < APP_PAGES.length; i++) {
+		let page = APP_PAGES[i];
+		let path = `/${page.id}`;
+		pageLinks.push(
+			<Link key={page.id} to={path}>
+				{page.name}
+			</Link>
+		);
+	}
+	return pageLinks;
+}
+
+function getExternalLinks() {
+	let externalLinks = [];
+	for (let i = 0; i < APP_LINKS.length; i++) {
+		let link = APP_LINKS[i];
+		externalLinks.push(
+			<a href={link.href}>
+				{link.name}
+			</a>
+		);
+	}
+	return externalLinks;
+}
+
 const Main = () => {
 	return (
 		<Router>
+			<nav>
+				{getPageLinks()}
+				{getExternalLinks()}
+			</nav>
 			<Switch>
 				{getRoutes()}
 				<Redirect key='default' to="/resume" />

@@ -1,7 +1,7 @@
 #app {
-    background-color: #ecefef;
-    color: #333;
-    font-family: sans-serif;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
 }
 
 html, body {
@@ -9,4 +9,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    background-color: #fefefe;
+    color: #222;
+    font-family: sans-serif;
 }
