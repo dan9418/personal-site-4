@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Nav.css';
 import Art from "./pages/Art/Art";
 import Software from "./pages/Software/Software";
@@ -60,9 +60,9 @@ const getPageLinks = () => {
 		let path = `/${page.id}`;
 		pageLinks.push(
 			<li>
-				<Link key={page.id} to={path}>
+				<NavLink key={page.id} to={path} activeClassName="active">
 					{page.name}
-				</Link>
+				</NavLink>
 			</li>
 		);
 	}

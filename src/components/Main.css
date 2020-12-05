@@ -3,8 +3,10 @@ h1 {
     position: sticky;
     top: 0;
     margin: 0;
-    padding: 8px;
-    background-color: #efefef;
+    padding: 8px 16px;
+    background-color: #70798C;
+    color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 
 h2 {
@@ -17,7 +19,7 @@ main {
     padding-top: 32px;
 }
 main > :first-child {
-    background-color: #fefefe;
+    background-color: #F5F1ED;
     width: 100%;
     height: 32px;
     position: absolute;
