@@ -42,7 +42,10 @@ const getRoutes = () => {
 		let RouteComponent = route.component;
 		routes.push(
 			<Route key={route.id} path={`/${route.id}`}>
-				<RouteComponent />
+				<h1>{route.name}</h1>
+				<div className={route.id}>
+					<RouteComponent />
+				</div>
 			</Route>
 		);
 	}
