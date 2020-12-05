@@ -1,0 +1,67 @@
+h2 {
+    margin: 16px 0 0 0;
+    border-bottom: 2px solid #eee;
+}
+
+h1 + div {
+    max-width: 1024px;
+    margin-left: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    margin-top: 16px;
+    table-layout: fixed;
+}
+
+th {
+    text-align: left;
+    width: 25%;
+}
+
+td {
+    vertical-align: top;
+    padding: 4px;
+}
+
+.resume ul {
+    margin: 0;
+    padding: 0;
+}
+
+.resume li {
+    list-style-type: square;
+    margin: 4px 0 4px 16px;
+    padding: 0;
+}
+
+h3, h4 {
+    margin: 16px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3:not(:first-child) {
+    margin-top: 32px;
+}
+
+h4 {
+    margin: 4px 0 16px 4px;
+}
+
+h3 > :last-child {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 80%;
+}
+
+h4 > :last-child {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 80%;
+}
