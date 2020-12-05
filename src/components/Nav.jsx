@@ -6,6 +6,7 @@ import Software from "./pages/Software/Software";
 import Home from './pages/Home/Home';
 import Music from "./pages/Music/Music";
 import Resume from "./pages/Resume/Resume";
+import ICON from "./ui/Icon";
 
 const APP_PAGES = [
 	{
@@ -61,6 +62,7 @@ const getPageLinks = () => {
 		pageLinks.push(
 			<li>
 				<NavLink key={page.id} to={path} activeClassName="active">
+					{ICON[page.id]}
 					{page.name}
 				</NavLink>
 			</li>
@@ -88,7 +90,7 @@ const Nav = () => {
 	return (
 		<nav>
 			<section>
-				<img src='/assets/me.jpg' />
+				<img src='/assets/img/me.jpg' />
 				<label>Dan Bednarczyk</label>
 				<div className="caption">Engineer ‧ Artist ‧ Activist</div>
 				<div className="location-wrapper">Sacramento, CA</div>

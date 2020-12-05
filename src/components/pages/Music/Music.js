@@ -44,7 +44,7 @@ const ALBUM_CONFIG = [
 					{ name: 'Bandcamp', icon: 'bandcamp', link: 'https://atlaseuphoria.bandcamp.com/album/need-not' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/need_not.txt' }
 				],
-				art: { path: './img/albums/need_not.jpg', name: 'Need Not album cover' }
+				art: { path: './assets/img/albums/need_not.jpg', name: 'Need Not album cover' }
 			},
 			{
 				title: 'Silent City',
@@ -68,7 +68,7 @@ const ALBUM_CONFIG = [
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=BdZc8xkQArw&feature=youtu.be' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/silent_city.txt' }
 				],
-				art: { path: './img/albums/silent_city.jpg', name: 'Silent City album cover' }
+				art: { path: './assets/img/albums/silent_city.jpg', name: 'Silent City album cover' }
 			}
 		],
 	},
@@ -104,7 +104,7 @@ const ALBUM_CONFIG = [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/peanut-butter-jam' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/peanut_butter_jam.txt' }
 				],
-				art: { path: './img/albums/peanut_butter_jam.jpg', name: 'Peanut Butter Jam album cover' }
+				art: { path: './assets/img/albums/peanut_butter_jam.jpg', name: 'Peanut Butter Jam album cover' }
 			},
 			{
 				title: 'Songs; And How NOT To Write Them!',
@@ -132,7 +132,7 @@ const ALBUM_CONFIG = [
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=WDdDrvqkbOk&list=PLF0EOAvsOKeCp_HowkIF6CVeExxuDXYRm' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/songs_and_how_not_to_write_them.txt' }
 				],
-				art: { path: './img/albums/songs_and_how_not_to_write_them.jpg', name: 'Songs; And How NOT To Write Them! album cover' }
+				art: { path: './assets/img/albums/songs_and_how_not_to_write_them.jpg', name: 'Songs; And How NOT To Write Them! album cover' }
 			},
 			{
 				title: 'Yellow Snow',
@@ -150,7 +150,7 @@ const ALBUM_CONFIG = [
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=f2EV4bBB4E8&list=PLF0EOAvsOKeAv8CK8nJT1sRIGEK17w96s' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/yellow_snow.txt' }
 				],
-				art: { path: './img/albums/yellow_snow.jpg', name: 'Yellow Snow album cover' }
+				art: { path: './assets/img/albums/yellow_snow.jpg', name: 'Yellow Snow album cover' }
 			}
 		]
 	},
@@ -183,7 +183,7 @@ const ALBUM_CONFIG = [
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=vzKuYdfCpdk' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/human_architecture.txt' }
 				],
-				art: { path: './img/albums/human_architecture.jpg', name: 'Human Architecture album cover' }
+				art: { path: './assets/img/albums/human_architecture.jpg', name: 'Human Architecture album cover' }
 			},
 			{
 				title: 'Out Of Reach',
@@ -216,7 +216,7 @@ const ALBUM_CONFIG = [
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=mL2CbEXX6lo&list=PLF0EOAvsOKeDZnT4z2Z-tZaFzL0qVuk6f' },
 					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/out_of_reach.txt' }
 				],
-				art: { path: './img/albums/out_of_reach.jpg', name: 'Out Of Reach album cover' }
+				art: { path: './assets/img/albums/out_of_reach.jpg', name: 'Out Of Reach album cover' }
 			}
 		]
 	}

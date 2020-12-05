@@ -1,0 +1,47 @@
+.gallery .middle {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+.gallery img {
+    width: auto;
+    height: auto;
+    max-width: 512px;
+    max-height: 512px;
+    border-radius: 8px;
+}
+
+.gallery button {
+    background-color: #DAD2BC;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: auto 0;
+}
+
+.gallery button:hover {
+   color: #768948;
+}
+
+.gallery label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.gallery button:first-child {
+    margin-right: 16px;
+    margin-left: auto;
+}
+
+.gallery button:last-child {
+    margin-left: 16px;
+    margin-right: auto;
+}

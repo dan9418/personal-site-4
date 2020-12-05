@@ -65,7 +65,21 @@ nav ul li a {
     padding: 16px;
     width: 100%;
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+nav a svg {
+   height: 24px;
+   width: 24px;
+   margin-right: 8px;
+   fill: #70798C
+}
+
+nav a svg * {
+    fill: #70798C
+ }
 
 nav ul li a.active {
     color: #768948;

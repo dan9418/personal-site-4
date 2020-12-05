@@ -1,6 +1,6 @@
 import * as React from "react";
+import Gallery from "../../ui/Gallery/Gallery";
 import "./Software.css";
-import { Gallery } from "../Art/Gallery/Gallery";
 
 const Software = () => {
 
@@ -47,13 +47,13 @@ const Software = () => {
 						name: 'The App In Action',
 						year: null,
 						caption: '',
-						path: './img/galleries/apps/ard.jpg'
+						path: './assets/img/galleries/apps/ard.jpg'
 					},
 					{
 						name: 'My Team & Sponsor',
 						year: null,
 						caption: '',
-						path: './img/galleries/apps/eaton.jpg'
+						path: './assets/img/galleries/apps/eaton.jpg'
 					}
 				]}
 			/>
@@ -74,13 +74,13 @@ const Software = () => {
 						name: 'Screenshot',
 						year: null,
 						caption: '',
-						path: './img/galleries/apps/bit_decryptor.jpg'
+						path: './assets/img/galleries/apps/bit_decryptor.jpg'
 					},
 					{
 						name: 'Logo',
 						year: null,
 						caption: '',
-						path: './img/galleries/apps/bit_decryptor_logo.png'
+						path: './assets/img/galleries/apps/bit_decryptor_logo.png'
 					}
 				]}
 			/>
