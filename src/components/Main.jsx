@@ -52,10 +52,11 @@ const getRoutes = () => {
 const Main = () => {
 	return (
 		<main>
-				<Switch>
-					{getRoutes()}
-					<Redirect key='default' to="/resume" />
-				</Switch>
+			<div />
+			<Switch>
+				{getRoutes()}
+				<Redirect key='default' to="/resume" />
+			</Switch>
 		</main>
 	);
 };
