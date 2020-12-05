@@ -78,6 +78,7 @@ const getExternalLinks = () => {
 		externalLinks.push(
 			<li>
 				<a href={link.href}>
+					{ICON[link.id]}
 					{link.name}
 				</a>
 			</li>

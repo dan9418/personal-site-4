@@ -42,7 +42,7 @@ const ALBUM_CONFIG = [
 				summary: 'A simple acoustic project to help me find my voice, literally and figuratively.',
 				links: [
 					{ name: 'Bandcamp', icon: 'bandcamp', link: 'https://atlaseuphoria.bandcamp.com/album/need-not' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/need_not.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/need_not.txt' }
 				],
 				art: { path: './assets/img/albums/need_not.jpg', name: 'Need Not album cover' }
 			},
@@ -66,7 +66,7 @@ const ALBUM_CONFIG = [
 					{ name: 'Bandcamp', icon: 'bandcamp', link: 'https://atlaseuphoria.bandcamp.com/album/silent-city' },
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/atlaseuphoria/sets/silent-city' },
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=BdZc8xkQArw&feature=youtu.be' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/silent_city.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/silent_city.txt' }
 				],
 				art: { path: './assets/img/albums/silent_city.jpg', name: 'Silent City album cover' }
 			}
@@ -102,7 +102,7 @@ const ALBUM_CONFIG = [
 				summary: 'A one-off single (produced by Daniel Blake and Jonathan Pushkar)',
 				links: [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/peanut-butter-jam' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/peanut_butter_jam.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/peanut_butter_jam.txt' }
 				],
 				art: { path: './assets/img/albums/peanut_butter_jam.jpg', name: 'Peanut Butter Jam album cover' }
 			},
@@ -130,7 +130,7 @@ const ALBUM_CONFIG = [
 				links: [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/songs-and-how-not-to-write-them' },
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=WDdDrvqkbOk&list=PLF0EOAvsOKeCp_HowkIF6CVeExxuDXYRm' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/songs_and_how_not_to_write_them.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/songs_and_how_not_to_write_them.txt' }
 				],
 				art: { path: './assets/img/albums/songs_and_how_not_to_write_them.jpg', name: 'Songs; And How NOT To Write Them! album cover' }
 			},
@@ -148,7 +148,7 @@ const ALBUM_CONFIG = [
 				links: [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/the-vectors-yellow-snow' },
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=f2EV4bBB4E8&list=PLF0EOAvsOKeAv8CK8nJT1sRIGEK17w96s' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/yellow_snow.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/yellow_snow.txt' }
 				],
 				art: { path: './assets/img/albums/yellow_snow.jpg', name: 'Yellow Snow album cover' }
 			}
@@ -181,7 +181,7 @@ const ALBUM_CONFIG = [
 				links: [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/atlaseuphoria/sets/human-architecture' },
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=vzKuYdfCpdk' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/human_architecture.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/human_architecture.txt' }
 				],
 				art: { path: './assets/img/albums/human_architecture.jpg', name: 'Human Architecture album cover' }
 			},
@@ -214,7 +214,7 @@ const ALBUM_CONFIG = [
 				links: [
 					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/out-of-reach' },
 					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=mL2CbEXX6lo&list=PLF0EOAvsOKeDZnT4z2Z-tZaFzL0qVuk6f' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './docs/lyrics/out_of_reach.txt' }
+					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/out_of_reach.txt' }
 				],
 				art: { path: './assets/img/albums/out_of_reach.jpg', name: 'Out Of Reach album cover' }
 			}
@@ -227,17 +227,20 @@ function getAlbums() {
 	for (let i = 0; i < ALBUM_CONFIG.length; i++) {
 		let category = ALBUM_CONFIG[i];
 		albums.push(
-			<div key={category.name + i}>
-				<h2>{category.name}</h2>
-				{category.links && category.links.length &&
-					<div className='category-links'>
-						{
-							category.links.map((link, index) => {
-								return <a key={index} href={link.link} target='_blank' rel='noopener noreferrer'>{ICON[link.icon]}</a>
-							})
-						}
-					</div>
-				}
+			<div className="album-container" key={category.name + i}>
+				<h2>
+					{category.name}
+					{category.links && category.links.length &&
+						<div className='link-container'>
+							{
+								category.links.map((link, index) => {
+									return <a key={index} href={link.link} target='_blank' rel='noopener noreferrer'>{ICON[link.icon]}</a>
+								})
+							}
+						</div>
+					}
+				</h2>
+
 				<p className='category-description'>{category.description}</p>
 				{category.albums.map((album, index) => { return <Album key={album.title} {...album} />; })}
 			</div>

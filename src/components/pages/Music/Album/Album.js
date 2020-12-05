@@ -28,7 +28,7 @@ export function Album(props) {
 			<div className='album-content'>
 				<div className='album-art-container'>
 					<img className='album-art' src={props.art.path} alt={props.art.name} />
-					<div className='album-link-container'>{getAlbumLinks(props)}</div>
+					<div className='link-container'>{getAlbumLinks(props)}</div>
 				</div>
 				<div className='album-tracklist'>{getAlbumTracks(props)}</div>
 			</div>

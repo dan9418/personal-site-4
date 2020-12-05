@@ -1,0 +1,26 @@
+.album img {
+    max-height: 256px;
+    max-width: 256px;
+}
+
+.album-content {
+    display: flex;
+}
+
+
+.link-container {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.link-container svg {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+}
+
+h2 > .link-container {
+    width: unset;
+    display: inline;
+}
