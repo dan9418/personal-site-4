@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import './Nav.css';
 import Art from "./pages/Art/Art";
-import Code from "./pages/Code/Code";
+import Software from "./pages/Software/Software";
 import Home from './pages/Home/Home';
 import Music from "./pages/Music/Music";
 import Resume from "./pages/Resume/Resume";
@@ -19,9 +19,9 @@ const APP_PAGES = [
 		component: Resume
 	},
 	{
-		id: 'code',
-		name: 'Code',
-		component: Code
+		id: 'software',
+		name: 'Software',
+		component: Software
 	},
 	{
 		id: 'music',
