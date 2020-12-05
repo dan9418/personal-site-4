@@ -47,6 +47,7 @@ module.exports = () => ({ mode: 'development',
      hashDigestLength: 20 },
   devServer:
    { contentBase: 'C:\\_dev\\personal-site-4/build/',
+     historyApiFallback: true,
      port: 9000,
      hot: true,
      host: 'localhost',
