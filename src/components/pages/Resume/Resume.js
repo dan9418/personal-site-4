@@ -20,14 +20,8 @@ function ResumePositionHeader(props) {
 const Resume = () => {
 
 	return (
-		<div>
-			<h2>About Me</h2>
-
-			<p>
-				I'm a web developer recently relocated from Pittsburgh, PA to Sacramento, CA.
-				I have full-stack experience, but specialize in frontend technologies.
-				Outside of work, I have many interests and hobbies, including music, fitness, nature, biking, cooking, and travelling.
-			</p>
+		<>
+			<h1>Resume</h1>
 
 			<h2>Technical Skills</h2>
 
@@ -172,7 +166,7 @@ const Resume = () => {
 				<li>Eagle Scout</li>
 			</ul>
 
-		</div>
+		</>
 	);
 };
 
