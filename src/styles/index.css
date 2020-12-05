@@ -2,6 +2,8 @@
     width: 100%;
     max-width: 1024px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 25% auto;
 }
 
 html, body {
