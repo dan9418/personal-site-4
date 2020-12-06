@@ -78,7 +78,7 @@ const getExternalLinks = () => {
 		let link = APP_LINKS[i];
 		externalLinks.push(
 			<li>
-				<a href={link.href}>
+				<a href={link.href} target='_blank' rel='noopener noreferrer'>
 					{ICON[link.id]}
 					{link.name}
 				</a>
@@ -97,6 +97,7 @@ const Nav = () => {
 				<div className="caption">Engineer • Artist • Advocate</div>
 				<IconLabel text="Sacramento, CA" id="location" />
 			</section>
+			<div className="list-header">PAGES</div>
 			<section>
 				<ul>
 					{getPageLinks()}
