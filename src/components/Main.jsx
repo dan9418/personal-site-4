@@ -6,6 +6,7 @@ import Software from "./pages/Software/Software";
 import Home from './pages/Home/Home';
 import Music from "./pages/Music/Music";
 import Resume from "./pages/Resume/Resume";
+import PageHeader from './ui/Headers/PageHeader';
 
 const APP_PAGES = [
 	{
@@ -42,7 +43,7 @@ const getRoutes = () => {
 		let RouteComponent = route.component;
 		routes.push(
 			<Route key={route.id} path={`/${route.id}`}>
-				<h1>{route.name}</h1>
+				<PageHeader text={route.name} />
 				<div className={route.id}>
 					<RouteComponent />
 				</div>
