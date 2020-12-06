@@ -8,7 +8,7 @@ import "./Music.css";
 const MUSIC_CONFIG = [
     {
         name: 'Atlas Euphoria',
-        description: `Atlas Euphoria is the moniker I use for my solo material, which incorporates elements of indie rock, folk, and jazz. My first two projects are available for free streaming and plenty more are in the works.`,
+        description: `Atlas Euphoria is the moniker I use for my solo material, which incorporates elements of indie rock, folk, and jazz. My first two projects are available for free streaming and plenty more are in the works for 2021. I am starting to return to creative music projects after spending some time studying music theory.`,
         icons: [
             {
                 name: 'Bandcamp',
@@ -76,7 +76,7 @@ const MUSIC_CONFIG = [
     },
     {
         name: 'The Vectors',
-        description: `The Vectors were my dormroom ska band in college.`,
+        description: `The Vectors were my low-budget, dormroom ska band in college. Not to be taken seriously.`,
         icons: [
             {
                 name: 'SoundCloud',
@@ -146,7 +146,7 @@ const MUSIC_CONFIG = [
                     { title: `The Elf Who Wanted To Be A Dentist` },
                     { title: `Jingle Squeals` }
                 ],
-                summary: 'A ridiculous EP to celebrate Christmas in July. Not to be taken seriously.',
+                summary: 'A ridiculous parody EP to celebrate Christmas in July.',
                 icons: [
                     { name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/livingfiction/sets/the-vectors-yellow-snow' },
                     { name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=f2EV4bBB4E8&list=PLF0EOAvsOKeAv8CK8nJT1sRIGEK17w96s' },

@@ -3,10 +3,19 @@
     max-width: 256px;
 }
 
+.album ol {
+    margin: 0;
+}
+
 .album-content {
     display: flex;
 }
 
+.album-note {
+    font-size: 80%;
+    margin-left: 4px;
+    color: #555;
+}
 
 .link-container {
     width: 100%;
@@ -23,4 +32,9 @@
 h2 > .link-container {
     width: unset;
     display: inline;
+}
+
+.album-summary {
+    font-style: italic;
+    color: #555;
 }

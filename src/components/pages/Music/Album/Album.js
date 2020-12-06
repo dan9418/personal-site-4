@@ -7,7 +7,7 @@ const getAlbumTracks = (trackDefs) => {
 	let tracks = [];
 	for (let i = 0; i < trackDefs.length; i++) {
 		let track = trackDefs[i];
-		tracks.push(<li className='album-track' key={i}>{track.title}<span className='album-track-note'>{track.note}</span></li>)
+		tracks.push(<li key={i}>{track.title}<span className='album-note'>{track.note}</span></li>)
 	}
 	return <ol>{tracks}</ol>;
 };
@@ -21,10 +21,8 @@ const Album = ({ title, year, summary, art, icons, tracks }) => {
 			/>
 			<p className='album-summary'>{summary}</p>
 			<div className='album-content'>
-				<div className='album-art-container'>
-					<img className='album-art' src={art.path} alt={art.name} />
-				</div>
-				<div className='album-tracklist'>{getAlbumTracks(tracks)}</div>
+				<img src={art.path} alt={art.name} />
+				{getAlbumTracks(tracks)}
 			</div>
 		</div>
 	);
