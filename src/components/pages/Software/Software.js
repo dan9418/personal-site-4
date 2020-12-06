@@ -1,6 +1,7 @@
 import * as React from "react";
 import Gallery from "../../ui/Gallery/Gallery";
 import SectionHeader from "../../ui/Headers/SectionHeader";
+import SectionSubheader from "../../ui/Headers/SectionSubheader";
 import "./Software.css";
 
 const Software = () => {
@@ -9,7 +10,7 @@ const Software = () => {
 		<>
 			<SectionHeader text="Web Apps" />
 
-			<h3>Play What</h3>
+			<SectionSubheader text="Play What" />
 
 			<p>
 				Play What is a React component library I developed for visualizing music theory concepts.
@@ -26,7 +27,7 @@ const Software = () => {
 
 			<SectionHeader text="Mobile Apps" />
 
-			<h3>Augmented Reality Dashboard</h3>
+			<SectionSubheader text="Augmented Reality Dashboard" />
 			<p>
 				I developed an
 				<span className='italic'> augmented reality dashboard </span>
@@ -60,7 +61,7 @@ const Software = () => {
 			/>
 
 
-			<h3>Boolean Algebra Calculator</h3>
+			<SectionSubheader text="Boolean Algebra Calculator" />
 
 			<p>
 				My first mobile project was an Android application for minimizing boolean expressions.

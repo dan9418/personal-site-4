@@ -2,19 +2,21 @@ import * as React from "react";
 import "./Resume.css";
 import ICON from "../../ui/Icon";
 import SectionHeader from "../../ui/Headers/SectionHeader";
+import SectionSubheader from "../../ui/Headers/SectionSubheader";
+import IconLabel from "../../ui/IconLabel/IconLabel";
 
-function ResumePositionHeader(props) {
+const ResumeSubheader = ({ company, date, position, location }) => {
 	return (
-		<>
-			<h3>
-				<div>{props.company}</div>
-				<div>{props.date}{ICON.calendar}</div>
-			</h3>
-			<h4>
-				<div>{props.title}</div>
-				<div>{props.location}{ICON.location}</div>
-			</h4>
-		</>
+		<div className="resume-subheader">
+			<SectionSubheader
+				text={company}
+				rightAction={<IconLabel text={date} id="calendar" />}
+			/>
+			<SectionSubheader level={4}
+				text={position}
+				rightAction={<IconLabel text={location} id="location" />}
+			/>
+		</div>
 	);
 }
 
@@ -84,9 +86,9 @@ const Resume = () => {
 
 			<SectionHeader text="Work Experience" />
 
-			<ResumePositionHeader
+			<ResumeSubheader
 				company='CBS Sports Digital'
-				title='Frontend Engineer'
+				position='Frontend Engineer'
 				date='December 2019 - Present'
 				location='El Dorado Hills, CA'
 			/>
@@ -95,9 +97,9 @@ const Resume = () => {
 				<li>Will be using React to modernize <a href='https://www.maxpreps.com/' target='_blank'>MaxPreps.com</a></li>
 			</ul>
 
-			<ResumePositionHeader
+			<ResumeSubheader
 				company='Bentley Systems'
-				title='Associate Software Engineer'
+				position='Associate Software Engineer'
 				date='May 2016 - July 2019'
 				location='Pittsburgh, PA + Vilnius, LT'
 			/>
@@ -113,9 +115,9 @@ const Resume = () => {
 				<li>Contributed to highly cooperative agile teams using Scrum and Kanban, both on-site and remotely</li>
 			</ul>
 
-			<ResumePositionHeader
+			<ResumeSubheader
 				company='The Bank of New York Mellon'
-				title='Software Engineer Intern'
+				position='Software Engineer Intern'
 				date='May 2015 – August 2015'
 				location='Pittsburgh, PA'
 			/>
@@ -126,9 +128,9 @@ const Resume = () => {
 				<li>Wrote Java application to integrate disparate datasources on a partitioned MVS/Linux mainframe</li>
 			</ul>
 
-			<ResumePositionHeader
+			<ResumeSubheader
 				company='University of Pittsburgh, Residence Life'
-				title='Resident Assistant'
+				position='Resident Assistant'
 				date='August 2014 - December 2015'
 				location='Pittsburgh, PA'
 			/>
@@ -141,9 +143,9 @@ const Resume = () => {
 
 			<SectionHeader text="Education" />
 
-			<ResumePositionHeader
+			<ResumeSubheader
 				company='University of Pittsburgh, Swanson School of Engineering'
-				title='BS, Computer Engineering'
+				position='BS, Computer Engineering'
 				date='April 2017'
 				location='Pittsburgh, PA'
 			/>

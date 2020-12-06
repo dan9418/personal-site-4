@@ -6,7 +6,7 @@
     grid-template-columns: 25% auto;
 }
 
-#app > div {
+#app>div {
     max-width: 1024px;
     width: 100%;
 }
@@ -16,7 +16,18 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #F5F1ED;
-    color: #252323;
+    /* THEME LIGHT */
+    background-color: #E1F2FE;
+    /* THEME DARK */
+    color: #0F0A0A;
     font-family: sans-serif;
+}
+
+a {
+    color: #2292A4;
+}
+
+a:hover {
+    cursor: pointer;
+    color: #2292A4;
 }

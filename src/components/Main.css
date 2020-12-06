@@ -5,7 +5,7 @@ main {
 }
 
 main > :first-child {
-    background-color: #F5F1ED;
+    background-color: #E1F2FE;
     width: 100%;
     height: 32px;
     position: absolute;

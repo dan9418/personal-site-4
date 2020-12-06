@@ -1,4 +1,5 @@
 import * as React from "react";
+import SectionHeader from "../../ui/Headers/SectionHeader";
 import "./Home.css";
 
 const Home = () => {

@@ -28,12 +28,11 @@ nav section:first-child label {
 
 nav section:first-child .caption {
     font-style: italic;
-    color: #A99985;
+    color: #555;
     margin: 8px 0;
 }
 
-nav section:first-child .location-wrapper {
-    color: #A99985;
+nav section:first-child .icon-label {
     margin-bottom: 16px;
 }
 
@@ -48,41 +47,49 @@ nav ul li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-
-    border-bottom: 1px solid #DAD2BC;
-}
-
-a {
-    color: #70798C;
-}
-
-a:hover {
-     cursor: pointer;
-    color: #776855;
 }
 
 nav ul li a {
-    padding: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px 0;
+    background-color: rgba(0, 0, 0, .05);
     width: 100%;
     display: block;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: #555;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+nav ul li a:hover svg, nav ul li a:hover svg * {
+    fill: #2292A4;
 }
 
 nav a svg {
-   height: 24px;
-   width: 24px;
-   margin-right: 8px;
-   fill: #70798C
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
 }
 
-nav a svg * {
-    fill: #70798C
- }
+nav a svg, nav a svg * {
+    fill: #555
+}
 
-nav ul li a.active {
-    color: #768948;
+nav a.active {
+    background-color: 2292A4;
+}
+
+nav a.active:not(:hover) {
+    color: white;
+}
+
+nav a.active svg, nav a.active svg * {
+    fill: white;
 }
 
 nav ul li a {
@@ -90,15 +97,18 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul.links li {
-   
-}
-
 .list-header {
     font-weight: bold;
     font-size: 80%;
-    color: #A99985;
+    color: #555;
     margin-top: 32px;
     padding: 8px;
-    border-bottom: 2px solid #DAD2BC;
+    border-bottom: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-header svg, .list-header svg * {
+    fill: #555;
 }

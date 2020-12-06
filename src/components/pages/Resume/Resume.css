@@ -4,6 +4,10 @@ table {
     table-layout: fixed;
 }
 
+table.skills ul {
+    padding: 0;
+}
+
 th {
     text-align: left;
     width: 25%;
@@ -14,13 +18,24 @@ td {
     padding: 4px;
 }
 
-.resume ul {
-    margin: 0;
-    padding: 0;
-}
+.resume ul {}
 
 .resume li {
     list-style-type: square;
     margin: 4px 0 4px 16px;
     padding: 0;
+}
+
+.resume-subheader h3 {
+    padding: 0;
+    border-bottom: none;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.resume-subheader h4 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
 }

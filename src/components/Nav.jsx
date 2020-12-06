@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Music from "./pages/Music/Music";
 import Resume from "./pages/Resume/Resume";
 import ICON from "./ui/Icon";
+import IconLabel from './ui/IconLabel/IconLabel';
 
 const APP_PAGES = [
 	{
@@ -93,15 +94,15 @@ const Nav = () => {
 			<section>
 				<img src='/assets/img/me.jpg' />
 				<label>Dan Bednarczyk</label>
-				<div className="caption">Engineer ‧ Artist ‧ Activist</div>
-				<div className="location-wrapper">Sacramento, CA</div>
+				<div className="caption">Engineer • Artist • Advocate</div>
+				<IconLabel text="Sacramento, CA" id="location" />
 			</section>
 			<section>
 				<ul>
 					{getPageLinks()}
 				</ul>
 			</section>
-			<div className="list-header">LINKS</div>
+			<div className="list-header">LINKS{ICON.newtab}</div>
 			<section>
 				<ul>
 					{getExternalLinks()}
