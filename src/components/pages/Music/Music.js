@@ -1,33 +1,33 @@
 import * as React from "react";
-import "./Music.css";
-import { Album } from "./Album/Album";
-import ICON from "../../ui/Icon";
 import SectionHeader from "../../ui/Headers/SectionHeader";
+import IconList from "../../ui/IconList/IconList";
+import { Album } from "./Album/Album";
+import "./Music.css";
 
 const ALBUM_CONFIG = [
 	{
 		name: 'Atlas Euphoria',
 		description: `Atlas Euphoria is the moniker I use for my solo material, which incorporates elements of indie rock, folk, and jazz. My first two projects are available for free streaming and plenty more are in the works.`,
-		links: [
+		icons: [
 			{
 				name: 'Bandcamp',
-				icon: 'bandcamp',
-				link: 'https://atlaseuphoria.bandcamp.com/'
+				id: 'bandcamp',
+				href: 'https://atlaseuphoria.bandcamp.com/'
 			},
 			{
 				name: 'Instagram',
-				icon: 'instagram',
-				link: 'https://www.instagram.com/atlaseuphoria/'
+				id: 'instagram',
+				href: 'https://www.instagram.com/atlaseuphoria/'
 			},
 			{
 				name: 'Facebook',
-				icon: 'facebook',
-				link: 'https://www.facebook.com/AtlasEuphoria'
+				id: 'facebook',
+				href: 'https://www.facebook.com/AtlasEuphoria'
 			},
 			{
 				name: 'YouTube',
-				icon: 'youtube',
-				link: 'https://www.youtube.com/channel/UCyq0-Fr2jM-GrbTB-SKOSkA'
+				id: 'youtube',
+				href: 'https://www.youtube.com/channel/UCyq0-Fr2jM-GrbTB-SKOSkA'
 			}
 		],
 		albums: [
@@ -41,9 +41,9 @@ const ALBUM_CONFIG = [
 					{ title: 'Small World' }
 				],
 				summary: 'A simple acoustic project to help me find my voice, literally and figuratively.',
-				links: [
-					{ name: 'Bandcamp', icon: 'bandcamp', link: 'https://atlaseuphoria.bandcamp.com/album/need-not' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/need_not.txt' }
+				icons: [
+					{ name: 'Bandcamp', id: 'bandcamp', href: 'https://atlaseuphoria.bandcamp.com/album/need-not' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/need_not.txt' }
 				],
 				art: { path: './assets/img/albums/need_not.jpg', name: 'Need Not album cover' }
 			},
@@ -63,11 +63,11 @@ const ALBUM_CONFIG = [
 					{ title: 'Looper' }
 				],
 				summary: 'My first proper album, an experimental indie rock project exploring themes of environmentalism and self-discovery.',
-				links: [
-					{ name: 'Bandcamp', icon: 'bandcamp', link: 'https://atlaseuphoria.bandcamp.com/album/silent-city' },
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/atlaseuphoria/sets/silent-city' },
-					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=BdZc8xkQArw&feature=youtu.be' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/silent_city.txt' }
+				icons: [
+					{ name: 'Bandcamp', id: 'bandcamp', href: 'https://atlaseuphoria.bandcamp.com/album/silent-city' },
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/atlaseuphoria/sets/silent-city' },
+					{ name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=BdZc8xkQArw&feature=youtu.be' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/silent_city.txt' }
 				],
 				art: { path: './assets/img/albums/silent_city.jpg', name: 'Silent City album cover' }
 			}
@@ -76,21 +76,21 @@ const ALBUM_CONFIG = [
 	{
 		name: 'The Vectors',
 		description: `The Vectors were my dormroom ska band in college.`,
-		links: [
+		icons: [
 			{
 				name: 'SoundCloud',
-				icon: 'soundcloud',
-				link: 'https://soundcloud.com/livingfiction/'
+				id: 'soundcloud',
+				href: 'https://soundcloud.com/livingfiction/'
 			},
 			{
 				name: 'Facebook',
-				icon: 'facebook',
-				link: 'https://www.facebook.com/TheVectors14'
+				id: 'facebook',
+				href: 'https://www.facebook.com/TheVectors14'
 			},
 			{
 				name: 'YouTube',
-				icon: 'youtube',
-				link: 'https://www.youtube.com/channel/UCVJVbOg-thDA-qI4L_fHfdg'
+				id: 'youtube',
+				href: 'https://www.youtube.com/channel/UCVJVbOg-thDA-qI4L_fHfdg'
 			}
 		],
 		albums: [
@@ -101,9 +101,9 @@ const ALBUM_CONFIG = [
 					{ title: 'Peanut Butter Jam' }
 				],
 				summary: 'A one-off single (produced by Daniel Blake and Jonathan Pushkar)',
-				links: [
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/peanut-butter-jam' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/peanut_butter_jam.txt' }
+				icons: [
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/livingfiction/peanut-butter-jam' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/peanut_butter_jam.txt' }
 				],
 				art: { path: './assets/img/albums/peanut_butter_jam.jpg', name: 'Peanut Butter Jam album cover' }
 			},
@@ -128,10 +128,10 @@ const ALBUM_CONFIG = [
 					{ title: 'Requiem For Third Wave Ska' }
 				],
 				summary: 'A low-budget ska-punk album poking fun at 50\'s tropes and paying homage to our heroes.',
-				links: [
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/songs-and-how-not-to-write-them' },
-					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=WDdDrvqkbOk&list=PLF0EOAvsOKeCp_HowkIF6CVeExxuDXYRm' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/songs_and_how_not_to_write_them.txt' }
+				icons: [
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/livingfiction/sets/songs-and-how-not-to-write-them' },
+					{ name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=WDdDrvqkbOk&list=PLF0EOAvsOKeCp_HowkIF6CVeExxuDXYRm' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/songs_and_how_not_to_write_them.txt' }
 				],
 				art: { path: './assets/img/albums/songs_and_how_not_to_write_them.jpg', name: 'Songs; And How NOT To Write Them! album cover' }
 			},
@@ -146,10 +146,10 @@ const ALBUM_CONFIG = [
 					{ title: `Jingle Squeals` }
 				],
 				summary: 'A ridiculous EP to celebrate Christmas in July. Not to be taken seriously.',
-				links: [
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/the-vectors-yellow-snow' },
-					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=f2EV4bBB4E8&list=PLF0EOAvsOKeAv8CK8nJT1sRIGEK17w96s' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/yellow_snow.txt' }
+				icons: [
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/livingfiction/sets/the-vectors-yellow-snow' },
+					{ name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=f2EV4bBB4E8&list=PLF0EOAvsOKeAv8CK8nJT1sRIGEK17w96s' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/yellow_snow.txt' }
 				],
 				art: { path: './assets/img/albums/yellow_snow.jpg', name: 'Yellow Snow album cover' }
 			}
@@ -179,10 +179,10 @@ const ALBUM_CONFIG = [
 					{ title: 'Last Will', note: '(Humility)' }
 				],
 				summary: 'An experimental, instrumental, prog-rock concept album exploring the Seven Deadly Sins.',
-				links: [
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/atlaseuphoria/sets/human-architecture' },
-					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=vzKuYdfCpdk' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/human_architecture.txt' }
+				icons: [
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/atlaseuphoria/sets/human-architecture' },
+					{ name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=vzKuYdfCpdk' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/human_architecture.txt' }
 				],
 				art: { path: './assets/img/albums/human_architecture.jpg', name: 'Human Architecture album cover' }
 			},
@@ -212,10 +212,10 @@ const ALBUM_CONFIG = [
 					{ title: 'Extrication' }
 				],
 				summary: 'My first album, an eclectic set of songs recorded during my sophomore year of high school.',
-				links: [
-					{ name: 'SoundCloud', icon: 'soundcloud', link: 'https://soundcloud.com/livingfiction/sets/out-of-reach' },
-					{ name: 'YouTube', icon: 'youtube', link: 'https://www.youtube.com/watch?v=mL2CbEXX6lo&list=PLF0EOAvsOKeDZnT4z2Z-tZaFzL0qVuk6f' },
-					{ name: 'Lyrics', icon: 'lyrics', link: './assets/txt/out_of_reach.txt' }
+				icons: [
+					{ name: 'SoundCloud', id: 'soundcloud', href: 'https://soundcloud.com/livingfiction/sets/out-of-reach' },
+					{ name: 'YouTube', id: 'youtube', href: 'https://www.youtube.com/watch?v=mL2CbEXX6lo&list=PLF0EOAvsOKeDZnT4z2Z-tZaFzL0qVuk6f' },
+					{ name: 'Lyrics', id: 'lyrics', href: './assets/txt/out_of_reach.txt' }
 				],
 				art: { path: './assets/img/albums/out_of_reach.jpg', name: 'Out Of Reach album cover' }
 			}
@@ -231,15 +231,7 @@ function getAlbums() {
 			<div className="album-container" key={category.name + i}>
 				<SectionHeader
 					text={category.name}
-					rightAction={category.links && category.links.length &&
-						<div className='link-container'>
-							{
-								category.links.map((link, index) => {
-									return <a key={index} href={link.link} target='_blank' rel='noopener noreferrer'>{ICON[link.icon]}</a>
-								})
-							}
-						</div>
-					}
+					rightAction={<IconList icons={category.icons} />}
 				/>
 
 				<p className='category-description'>{category.description}</p>

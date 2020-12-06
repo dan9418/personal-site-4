@@ -1,0 +1,10 @@
+.icon-list {
+    margin: 8px 0;
+    display: inline-flex;
+}
+
+.icon-list svg {
+    height: 24px;
+    width: 24px;
+    margin: 0 8px;
+}

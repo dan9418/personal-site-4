@@ -1,15 +1,7 @@
 import * as React from "react";
 import "./Album.css";
 import ICON from "../../../ui/Icon";
-
-function getAlbumLinks(props) {
-	let links = [];
-	for (let i = 0; i < props.links.length; i++) {
-		let link = props.links[i];
-		links.push(<a key={i} href={link.link} target='_blank' rel='noopener noreferrer'>{ICON[link.icon]}</a>);
-	}
-	return links;
-}
+import IconList from "../../../ui/IconList/IconList";
 
 function getAlbumTracks(props) {
 	let tracks = [];
@@ -28,7 +20,7 @@ export function Album(props) {
 			<div className='album-content'>
 				<div className='album-art-container'>
 					<img className='album-art' src={props.art.path} alt={props.art.name} />
-					<div className='link-container'>{getAlbumLinks(props)}</div>
+					<IconList icons={props.icons} />
 				</div>
 				<div className='album-tracklist'>{getAlbumTracks(props)}</div>
 			</div>
