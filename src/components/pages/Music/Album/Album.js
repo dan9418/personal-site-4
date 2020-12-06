@@ -1,29 +1,33 @@
 import * as React from "react";
-import "./Album.css";
-import ICON from "../../../ui/Icon";
+import SectionSubheader from "../../../ui/Headers/SectionSubheader";
 import IconList from "../../../ui/IconList/IconList";
+import "./Album.css";
 
-function getAlbumTracks(props) {
+const getAlbumTracks = (trackDefs) => {
 	let tracks = [];
-	for (let i = 0; i < props.tracks.length; i++) {
-		let track = props.tracks[i];
+	for (let i = 0; i < trackDefs.length; i++) {
+		let track = trackDefs[i];
 		tracks.push(<li className='album-track' key={i}>{track.title}<span className='album-track-note'>{track.note}</span></li>)
 	}
 	return <ol>{tracks}</ol>;
-}
+};
 
-export function Album(props) {
+const Album = ({ title, year, summary, art, icons, tracks }) => {
 	return (
 		<div className='album'>
-			<h3>{props.title + ' (' + props.year + ')'}</h3>
-			<p className='album-summary'>{props.summary}</p>
+			<SectionSubheader
+				text={`${title} (${year})`}
+				rightAction={<IconList icons={icons} />}
+			/>
+			<p className='album-summary'>{summary}</p>
 			<div className='album-content'>
 				<div className='album-art-container'>
-					<img className='album-art' src={props.art.path} alt={props.art.name} />
-					<IconList icons={props.icons} />
+					<img className='album-art' src={art.path} alt={art.name} />
 				</div>
-				<div className='album-tracklist'>{getAlbumTracks(props)}</div>
+				<div className='album-tracklist'>{getAlbumTracks(tracks)}</div>
 			</div>
 		</div>
 	);
-}
+};
+
+export default Album;

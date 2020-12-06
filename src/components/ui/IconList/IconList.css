@@ -1,6 +1,7 @@
 .icon-list {
     margin: 8px 0;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
 }
 
 .icon-list svg {

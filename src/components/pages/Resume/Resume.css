@@ -24,32 +24,3 @@ td {
     margin: 4px 0 4px 16px;
     padding: 0;
 }
-
-h3, h4 {
-    margin: 16px 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-h3:not(:first-child) {
-    margin-top: 32px;
-}
-
-h4 {
-    margin: 4px 0 16px 4px;
-}
-
-h3 > :last-child {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    font-size: 80%;
-}
-
-h4 > :last-child {
-    display: flex;
-    align-items: center;
-    font-weight: normal;
-    font-size: 80%;
-}

@@ -16,6 +16,16 @@ h1.page-header + div {
 }
 
 h2.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 16px 0 0 0;
     border-bottom: 2px solid #DAD2BC;
+}
+
+.section-subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #DAD2BC;
 }

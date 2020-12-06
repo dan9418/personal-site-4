@@ -1,7 +1,8 @@
 import * as React from "react";
 import SectionHeader from "../../ui/Headers/SectionHeader";
+import SectionSubheader from "../../ui/Headers/SectionSubheader";
 import IconList from "../../ui/IconList/IconList";
-import { Album } from "./Album/Album";
+import Album from "./Album/Album";
 import "./Music.css";
 
 const ALBUM_CONFIG = [
@@ -223,7 +224,7 @@ const ALBUM_CONFIG = [
 	}
 ];
 
-function getAlbums() {
+const getAlbums = () => {
 	let albums = [];
 	for (let i = 0; i < ALBUM_CONFIG.length; i++) {
 		let category = ALBUM_CONFIG[i];
@@ -233,24 +234,23 @@ function getAlbums() {
 					text={category.name}
 					rightAction={<IconList icons={category.icons} />}
 				/>
-
 				<p className='category-description'>{category.description}</p>
 				{category.albums.map((album, index) => { return <Album key={album.title} {...album} />; })}
 			</div>
 		);
 	}
 	return albums;
-}
+};
 
 const Music = () => {
 	return (
 		<div>
-			<p className='intro'>
+			<p>
 				Music is one of my greatest passions - I love experimenting with new instruments, genres, sounds, and production techniques.
 				Most of my music is guitar-based, but I also play some bass, drums, piano, and trombone.
 			</p>
 
-			<p className='intro'>
+			<p>
 				Beyond performing, I'm extremely interested in audio engineering, especially the creative use of unconventional sounds and textures in music.
 				While a student, I studied and recorded in Pitt's Music Engineering Laboratory.
 				I now have a modest home studio for recording myself and friends.
@@ -259,6 +259,6 @@ const Music = () => {
 			{getAlbums()}
 		</div>
 	);
-}
+};
 
 export default Music;

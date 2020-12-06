@@ -288,7 +288,7 @@ function getGalleries() {
 const Art = () => {
 	return (
 		<div>
-			<p className='intro'>
+			<p>
 				I enjoy art as a creator and a fan.
 				I'm especially passionate about graphic design.
 				I have done freelance work for over a decade, from club t-shirts and posters to all of my personal music projects and tattoos.
