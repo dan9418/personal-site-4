@@ -42,17 +42,18 @@ const Resume = () => {
 								<li>JavaScript (ES6)</li>
 								<li>TypeScript</li>
 								<li>React</li>
+								<li>Next</li>
+								<li>Styled Components</li>
 								<li>Angular</li>
 								<li>HTML5</li>
 								<li>CSS3</li>
 								<li>JSON / XML</li>
-								<li>Jasmine / Mocha Testing</li>
 							</ul>
 						</td>
 						<td>
 							<ul>
-								<li>.NET (C#)</li>
 								<li>Node</li>
+								<li>.NET (C#)</li>
 								<li>Java</li>
 								<li>PHP</li>
 								<li>C++</li>
@@ -72,12 +73,13 @@ const Resume = () => {
 						<td>
 							<ul>
 								<li>Git</li>
+								<li>Sentry</li>
 								<li>REST / HTTP</li>
 								<li>npm</li>
 								<li>Azure</li>
-								<li>Android SDK</li>
-								<li>Unit + Integration Testing</li>
+								<li>Android</li>
 								<li>Photoshop</li>
+								<li>Unit Testing</li>
 							</ul>
 						</td>
 					</tr>
@@ -94,7 +96,11 @@ const Resume = () => {
 			/>
 
 			<ul>
-				<li>Will be using React to modernize <a href='https://www.maxpreps.com/' target='_blank'>MaxPreps.com</a></li>
+				<li>Serving as the primary frontend engineer in effort to modularize and modernize the <a href='https://www.maxpreps.com/' target='_blank'>MaxPreps.com</a> architecture</li>
+				<li>Implementing new React pages utilizing Next.js for server-side rendering and SEO optimization</li>
+				<li>Building out robust, responsive component library using styled-components</li>
+				<li>Architecting patterns for ad, tracking, and edge-caching implementations</li>
+				<li>Working directly with stakeholders across product, design, and engineering in a highly collaborative Agile environment</li>
 			</ul>
 
 			<ResumeSubheader
@@ -110,9 +116,6 @@ const Resume = () => {
 				<li>Authored backend services for scalability, flexibility, and modularity using .NET framework</li>
 				<li>Integrated relational and NoSQL databases into web applications</li>
 				<li>Worked with Azure cloud applications utilizing Octopus for CI/CD pipelines</li>
-				<li>Utilized various Node packages, preprocessors, and task-runners</li>
-				<li>Enforced SDLC best-practices such as source control management, code reviews, and TDD</li>
-				<li>Contributed to highly cooperative agile teams using Scrum and Kanban, both on-site and remotely</li>
 			</ul>
 
 			<ResumeSubheader

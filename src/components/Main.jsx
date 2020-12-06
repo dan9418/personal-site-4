@@ -43,7 +43,7 @@ const getRoutes = () => {
 		let RouteComponent = route.component;
 		routes.push(
 			<Route key={route.id} path={`/${route.id}`}>
-				<PageHeader text={route.name} />
+				<PageHeader text={route.id === 'home' ? 'Hey there' : route.name} />
 				<div className={route.id}>
 					<RouteComponent />
 				</div>

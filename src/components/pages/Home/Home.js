@@ -10,7 +10,10 @@ const Home = () => {
 			<p>
 				I'm a web developer from Pittsburgh, PA currently based in Sacramento, CA.
 				I specialize in frontend technologies like React and Next.js, but I have worked across the web stack.
-				Outside of work, I have many hobbies, including music, gardening, travel, fitness, cooking, community develoment, and outdoor adventures.
+			</p>
+			<p>
+				Outside of work, I am passionate about music, plants, travel, fitness, cooking, and community develoment.
+				You can browse my portfolios to check out some of my projects.
 			</p>
 		</div>
 	);

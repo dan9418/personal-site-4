@@ -13,16 +13,31 @@ const Software = () => {
 			<SectionSubheader text="Play What" />
 
 			<p>
-				Play What is a React component library I developed for visualizing music theory concepts.
-				It provides a simple API for configuring built-in viewer components and creating your own.
+				Play What is a music modeling toolkit that I have been developing for several years.
+				I am preparing to release the first major version in early 2021.
 			</p>
 
 			<p>
-				The beta version is currently available, but I am actively refining the architecture and features for the first major release.
+				The Play What engine is based on a series of models I devised to represent various musical ideas.
+				The models are simple and flexible enough to serve as an efficient interchange format for musical conversions and transforms.
 			</p>
 
 			<p>
-				Examples and interactive documentation can be found on the <a href='https://dan9418.github.io/play-what-sample/' target='_blank' rel='noopener noreferrer'>project site</a>.
+				When finished, the Play What suite will include:
+			</p>
+
+			<ul>
+				<li>A simple, efficient, and flexible data structure specification</li>
+				<li>A JavaScript API for working with these data structures</li>
+				<li>An immutable object-oriented JavaScript framework to wrap these data structures</li>
+				<li>A React component library for visualizing these data structures</li>
+				<li>A free web app demonstrating the library's abilities intended for musicians of all levels</li>
+				<li>An open-source repository designed to be easily forked and extended</li>
+				<li>A young community of technical music theory enthusiasts</li>
+			</ul>
+
+			<p>
+				An early beta demo can be found <a href='https://dan9418.github.io/play-what-sample/' target='_blank' rel='noopener noreferrer'>here</a>.
 			</p>
 
 			<SectionHeader text="Mobile Apps" />
