@@ -1,9 +1,11 @@
 #app {
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
     display: grid;
     grid-template-columns: 25% auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #app>div {
@@ -30,4 +32,15 @@ a {
 a:hover {
     cursor: pointer;
     color: #2292A4;
+}
+
+svg {
+    height: 16px;
+    width: 16px;
+    margin: 0 4px;
+    fill: #555;
+}
+
+svg * {
+    fill: #555;
 }

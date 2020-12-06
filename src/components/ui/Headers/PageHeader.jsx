@@ -4,6 +4,7 @@ import "./Headers.css";
 const PageHeader = ({ text }) => {
     return (
         <h1 className='page-header'>
+            <div />
             {text}
         </h1>
     );

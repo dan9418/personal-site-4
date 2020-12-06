@@ -19,7 +19,7 @@ const Album = ({ title, year, summary, art, icons, tracks }) => {
 				text={`${title} (${year})`}
 				rightAction={<IconList icons={icons} />}
 			/>
-			<p className='album-summary'>{summary}</p>
+			<p>{summary}</p>
 			<div className='album-content'>
 				<img src={art.path} alt={art.name} />
 				{getAlbumTracks(tracks)}

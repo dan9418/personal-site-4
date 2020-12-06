@@ -77,7 +77,8 @@ nav a svg {
 }
 
 nav a svg, nav a svg * {
-    fill: #555
+    fill: #555;
+    color: #555;
 }
 
 nav a.active {

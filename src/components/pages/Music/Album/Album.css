@@ -14,7 +14,7 @@
 .album-note {
     font-size: 80%;
     margin-left: 4px;
-    color: #2292A4;
+    color: #555;
 }
 
 .link-container {
@@ -32,9 +32,4 @@
 h2 > .link-container {
     width: unset;
     display: inline;
-}
-
-.album-summary {
-    font-style: italic;
-    color: #2292A4;
 }

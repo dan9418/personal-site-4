@@ -9,6 +9,15 @@ h1.page-header {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 
+h1.page-header > :first-child {
+    background-color: #E1F2FE;
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+}
+
 h1.page-header+div {
     max-width: 1024px;
     margin-left: 8px;
@@ -20,6 +29,7 @@ h2.section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 4px;
     margin: 16px 0 0 0;
     border-bottom: 2px solid #2292A4;
 }

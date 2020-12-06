@@ -9,3 +9,11 @@
     width: 24px;
     margin: 0 8px;
 }
+
+.icon-list svg:hover {
+    fill: #2292A4;
+}
+
+.icon-list svg:hover * {
+    fill: #2292A4;
+}

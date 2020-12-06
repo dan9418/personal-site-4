@@ -56,7 +56,6 @@ const getRoutes = () => {
 const Main = () => {
 	return (
 		<main>
-			<div />
 			<Switch>
 				{getRoutes()}
 				<Redirect key='default' to="/home" />
