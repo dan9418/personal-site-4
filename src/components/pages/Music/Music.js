@@ -2,6 +2,7 @@ import * as React from "react";
 import "./Music.css";
 import { Album } from "./Album/Album";
 import ICON from "../../ui/Icon";
+import SectionHeader from "../../ui/Headers/SectionHeader";
 
 const ALBUM_CONFIG = [
 	{
@@ -228,9 +229,9 @@ function getAlbums() {
 		let category = ALBUM_CONFIG[i];
 		albums.push(
 			<div className="album-container" key={category.name + i}>
-				<h2>
-					{category.name}
-					{category.links && category.links.length &&
+				<SectionHeader
+					text={category.name}
+					rightAction={category.links && category.links.length &&
 						<div className='link-container'>
 							{
 								category.links.map((link, index) => {
@@ -239,7 +240,7 @@ function getAlbums() {
 							}
 						</div>
 					}
-				</h2>
+				/>
 
 				<p className='category-description'>{category.description}</p>
 				{category.albums.map((album, index) => { return <Album key={album.title} {...album} />; })}

@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Resume.css";
 import ICON from "../../ui/Icon";
+import SectionHeader from "../../ui/Headers/SectionHeader";
 
 function ResumePositionHeader(props) {
 	return (
@@ -21,7 +22,7 @@ const Resume = () => {
 
 	return (
 		<>
-			<h2>Technical Skills</h2>
+			<SectionHeader text="Technical Skills" />
 
 			<table className='skills'>
 				<thead>
@@ -81,7 +82,7 @@ const Resume = () => {
 				</tbody>
 			</table>
 
-			<h2>Work Experience</h2>
+			<SectionHeader text="Work Experience" />
 
 			<ResumePositionHeader
 				company='CBS Sports Digital'
@@ -138,7 +139,7 @@ const Resume = () => {
 				<li>Organized large-scale social, educational, and experiential programs</li>
 			</ul>
 
-			<h2>Education</h2>
+			<SectionHeader text="Education" />
 
 			<ResumePositionHeader
 				company='University of Pittsburgh, Swanson School of Engineering'
@@ -152,7 +153,7 @@ const Resume = () => {
 				<li>3.71 GPA</li>
 			</ul>
 
-			<h2>Projects</h2>
+			<SectionHeader text="Projects" />
 
 			<ul>
 				<li>Created and published <a href='https://dan9418.github.io/play-what-sample/' target='_blank' rel='noopener noreferrer'>Play What</a>, a React component library for visualizing music theory concepts</li>
@@ -163,7 +164,7 @@ const Resume = () => {
 				<li>Developed this portfolio site in React and TypeScript</li>
 			</ul>
 
-			<h2>Awards</h2>
+			<SectionHeader text="Awards" />
 
 			<ul>
 				<li>Selected for inaugural International Graduate Development Program in Vilnius, Lithuania</li>

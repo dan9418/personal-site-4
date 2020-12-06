@@ -1,12 +1,13 @@
 import * as React from "react";
 import Gallery from "../../ui/Gallery/Gallery";
+import SectionHeader from "../../ui/Headers/SectionHeader";
 import "./Software.css";
 
 const Software = () => {
 
 	return (
 		<>
-			<h2>Web Apps</h2>
+			<SectionHeader text="Web Apps" />
 
 			<h3>Play What</h3>
 
@@ -23,7 +24,7 @@ const Software = () => {
 				Examples and interactive documentation can be found on the <a href='https://dan9418.github.io/play-what-sample/' target='_blank' rel='noopener noreferrer'>project site</a>.
 			</p>
 
-			<h2>Mobile Apps</h2>
+			<SectionHeader text="Mobile Apps" />
 
 			<h3>Augmented Reality Dashboard</h3>
 			<p>

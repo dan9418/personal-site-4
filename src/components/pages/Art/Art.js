@@ -1,5 +1,6 @@
 import * as React from "react";
 import Gallery from "../../ui/Gallery/Gallery";
+import SectionHeader from "../../ui/Headers/SectionHeader";
 import "./Art.css";
 
 const GALLERY_CONFIG = [
@@ -275,7 +276,7 @@ function getGalleries() {
 		let gallery = GALLERY_CONFIG[i];
 		galleries.push(
 			<div key={i}>
-				<h2>{gallery.name}</h2>
+				<SectionHeader text={gallery.name} />
 				<p className='gallery-description'>{gallery.description}</p>
 				<Gallery key={gallery.name} {...gallery} />
 			</div>

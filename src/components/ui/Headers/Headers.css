@@ -14,3 +14,8 @@ h1.page-header + div {
     padding: 8px;
     box-sizing: border-box;
 }
+
+h2.section-header {
+    margin: 16px 0 0 0;
+    border-bottom: 2px solid #DAD2BC;
+}

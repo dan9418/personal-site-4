@@ -1,12 +1,9 @@
-h2 {
-    margin: 32px 0 0 0;
-}
-
 main {
     max-height: 100%;
     overflow-y: auto;
     padding-top: 32px;
 }
+
 main > :first-child {
     background-color: #F5F1ED;
     width: 100%;
