@@ -9,7 +9,7 @@ import Resume from "./pages/Resume/Resume";
 import ICON from "./ui/Icon";
 import IconLabel from './ui/IconLabel/IconLabel';
 
-const APP_PAGES = [
+const NAV_LINKS = [
 	{
 		id: 'home',
 		name: 'Home',
@@ -37,7 +37,7 @@ const APP_PAGES = [
 	}
 ];
 
-const APP_LINKS = [
+const EXTERNAL_LINKS = [
 	{
 		id: 'linkedin',
 		name: 'LinkedIn',
@@ -55,38 +55,47 @@ const APP_LINKS = [
 	}
 ];
 
-const getPageLinks = () => {
-	let pageLinks = [];
-	for (let i = 0; i < APP_PAGES.length; i++) {
-		let page = APP_PAGES[i];
-		let path = `/${page.id}`;
-		pageLinks.push(
-			<li key={page.id}>
+const getLinks = (linkDefs, isNavLink = false) => {
+	let links = [];
+	for (let i = 0; i < linkDefs.length; i++) {
+		let link = linkDefs[i];
+		let linkComponent = null;
+		if (isNavLink) {
+			let path = `/${link.id}`;
+			linkComponent = (
 				<NavLink to={path} activeClassName="active">
-					{ICON[page.id]}
-					{page.name}
+					{ICON[link.id]}
+					{link.name}
 				</NavLink>
-			</li>
-		);
-	}
-	return pageLinks;
-}
-
-const getExternalLinks = () => {
-	let externalLinks = [];
-	for (let i = 0; i < APP_LINKS.length; i++) {
-		let link = APP_LINKS[i];
-		externalLinks.push(
-			<li key={link.id}>
+			);
+		}
+		else {
+			linkComponent = (
 				<a href={link.href} target='_blank' rel='noopener noreferrer'>
 					{ICON[link.id]}
 					{link.name}
 				</a>
+			);
+		}
+		links.push(
+			<li key={link.id}>
+				{linkComponent}
 			</li>
 		);
 	}
-	return externalLinks;
+	return links;
 }
+
+const MenuList = ({ header, linkData, isNavLink }) => {
+	return (
+		<section>
+			<div className="list-header">{header}{isNavLink ? null : ICON.newTab}</div>
+			<ul>
+				{getLinks(linkData, isNavLink)}
+			</ul>
+		</section>
+	);
+};
 
 const Nav = () => {
 	return (
@@ -97,18 +106,15 @@ const Nav = () => {
 				<div className="caption">Engineer • Artist • Advocate</div>
 				<IconLabel text="Sacramento, CA" id="location" />
 			</section>
-			<div className="list-header">PAGES</div>
-			<section>
-				<ul>
-					{getPageLinks()}
-				</ul>
-			</section>
-			<div className="list-header">LINKS{ICON.newtab}</div>
-			<section>
-				<ul>
-					{getExternalLinks()}
-				</ul>
-			</section>
+			<MenuList
+				header="PAGES"
+				linkData={NAV_LINKS}
+				isNavLink
+			/>
+			<MenuList
+				header="LINKS"
+				linkData={EXTERNAL_LINKS}
+			/>
 		</nav>
 	);
 };
