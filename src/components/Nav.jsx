@@ -88,7 +88,7 @@ const getLinks = (linkDefs, isNavLink = false) => {
 
 const MenuList = ({ header, linkData, isNavLink }) => {
 	return (
-		<section>
+		<section className="menu-list">
 			<div className="list-header">{header}{isNavLink ? null : ICON.newTab}</div>
 			<ul>
 				{getLinks(linkData, isNavLink)}
@@ -100,7 +100,7 @@ const MenuList = ({ header, linkData, isNavLink }) => {
 const Nav = () => {
 	return (
 		<nav>
-			<section>
+			<section className="intro">
 				<img src='/assets/img/me.jpg' />
 				<label>Dan Bednarczyk</label>
 				<div className="caption">Engineer • Artist • Advocate</div>
