@@ -61,8 +61,8 @@ const getPageLinks = () => {
 		let page = APP_PAGES[i];
 		let path = `/${page.id}`;
 		pageLinks.push(
-			<li>
-				<NavLink key={page.id} to={path} activeClassName="active">
+			<li key={page.id}>
+				<NavLink to={path} activeClassName="active">
 					{ICON[page.id]}
 					{page.name}
 				</NavLink>
@@ -77,7 +77,7 @@ const getExternalLinks = () => {
 	for (let i = 0; i < APP_LINKS.length; i++) {
 		let link = APP_LINKS[i];
 		externalLinks.push(
-			<li>
+			<li key={link.id}>
 				<a href={link.href} target='_blank' rel='noopener noreferrer'>
 					{ICON[link.id]}
 					{link.name}
