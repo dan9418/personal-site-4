@@ -1,15 +1,21 @@
 h1.page-header {
-    position: sticky;
-    top: 0;
-    margin: 0;
-    padding: 8px 16px;
-    /* THEME PRIMARY */
-    background-color: #2292A4;
-    color: white;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
+   margin: 0 16px;
 }
 
-h1.page-header > :first-child {
+@media(min-width: 1024px) {
+    h1.page-header {
+        position: sticky;
+        top: 0;
+        margin: 0;
+        padding: 8px 16px;
+        /* THEME PRIMARY */
+        background-color: #2292A4;
+        color: white;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
+    }
+}
+
+h1.page-header> :first-child {
     background-color: #E1F2FE;
     width: 100%;
     height: 32px;

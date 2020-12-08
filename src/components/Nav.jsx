@@ -98,9 +98,27 @@ const MenuList = ({ header, linkData, isNavLink }) => {
 	);
 };
 
+const MobileNav = () => {
+	return (
+		<nav className='mobile'>
+			<h1>Dan Bednarczyk</h1>
+			<MenuList
+				header="PAGES"
+				linkData={NAV_LINKS}
+				isNavLink
+			/>
+			<MenuList
+				header="LINKS"
+				linkData={EXTERNAL_LINKS}
+			/>
+		</nav>
+	);
+};
+
 const Nav = () => {
 	const isMobile = useIsMobile();
-	console.log(isMobile)
+	if (isMobile) return <MobileNav />;
+
 	return (
 		<nav>
 			<section className="intro">

@@ -1,6 +1,6 @@
 #app {
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -8,8 +8,10 @@
     right: 0;
 }
 
-@media(min-width: 512px) {
-    
+@media(min-width: 1024px) {
+    #app {
+        grid-template-columns: 25% auto;
+    }
 }
 
 #app>div {
