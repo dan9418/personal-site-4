@@ -8,6 +8,7 @@ import Music from "./pages/Music/Music";
 import Resume from "./pages/Resume/Resume";
 import ICON from "./ui/Icon";
 import IconLabel from './ui/IconLabel/IconLabel';
+import { useIsMobile } from '../hooks/useWindowSize';
 
 const NAV_LINKS = [
 	{
@@ -98,6 +99,8 @@ const MenuList = ({ header, linkData, isNavLink }) => {
 };
 
 const Nav = () => {
+	const isMobile = useIsMobile();
+	console.log(isMobile)
 	return (
 		<nav>
 			<section className="intro">
