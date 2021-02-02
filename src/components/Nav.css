@@ -1,175 +1,119 @@
-@media(min-width: 1024px) {
-    nav {
-        position: sticky;
-        top: 0;
-        padding: 32px 24px;
-        max-width: 256px;
-        margin-left: auto;
-    }
-    nav .intro {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    nav .intro img {
-        width: 100%;
-        max-height: 128px;
-        max-width: 128px;
-        border-radius: 50%;
-        margin: 0 0 16px 0;
-        box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-    }
-    nav .intro label {
-        font-weight: bold;
-        font-size: 120%;
-    }
-    nav .intro .caption {
-        font-style: italic;
-        color: #555;
-        margin: 8px 0;
-    }
-    nav .intro .icon-label {
-        margin-bottom: 16px;
-    }
-    nav .menu-list ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    nav .menu-list li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-    nav .menu-list a {
-        padding: 8px;
-        border-radius: 8px;
-        margin: 8px 0;
-        background-color: rgba(0, 0, 0, .05);
-        width: 100%;
-        display: block;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        color: #555;
-    }
-    nav .menu-list a:hover {
-        color: #2292A4;
-        background-color: rgba(0, 0, 0, .1);
-    }
-    nav .menu-list a:hover svg, nav .menu-list a:hover svg * {
-        fill: #2292A4;
-    }
-    nav .menu-list a svg {
-        height: 24px;
-        width: 24px;
-        margin-right: 8px;
-    }
-    nav .menu-list a svg, nav .menu-list a svg * {
-        fill: #555;
-        color: #555;
-    }
-    nav .menu-list a.active {
-        color: white;
-        background-color: #2292A4;
-    }
-    nav .menu-list a.active:not(:hover) {
-        color: white;
-    }
-    nav .menu-list a.active svg, nav .menu-list a.active svg * {
-        fill: white;
-    }
-    nav .menu-list a {
-        font-weight: bold;
-        text-decoration: none;
-    }
-    nav .menu-list .list-header {
-        width: 100%;
-        font-weight: bold;
-        font-size: 80%;
-        color: #555;
-        margin-top: 32px;
-        padding: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    nav .menu-list .list-header svg, nav .menu-list .list-header svg * {
-        fill: #555;
-    }
+nav {
+    position: sticky;
+    top: 0;
+    padding: 32px 24px;
+    max-width: 256px;
+    overflow-y: auto;
 }
 
-@media(max-width: 1023px) {
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background-color: #2292A4;
-        color: white;
-    }
-    nav section {
-        display: inline-block;
-    }
-    nav section:last-child::before {
-        content: ' ';
-    }
-    nav a {
-        color: white;
-        font-weight: normal;
-        text-decoration: none;
-        padding: 4px 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    nav svg {
-        height: 16px;
-        width: 16px;
-        margin-right: 4px;
-    }
-    nav svg, nav svg * {
-        fill: white;
-    }
-    nav .menu-list ul {
-        padding: 8px;
-        margin: 0;
-        display: inline-flex;
-        flex-direction: row;
-    }
-    nav .menu-list li {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-    nav .menu-list .list-header {
-        display: none;
-    }
-    nav .intro label {
-        font-weight: bold;
-        font-size: 120%;
-    }
-    nav .intro .caption {
-        font-style: italic;
-        color: #555;
-        margin: 8px 0;
-    }
-    nav .intro .icon-label {
-        margin-bottom: 16px;
-    }
-    nav h1 {
-        padding: 0;
-        margin: 8px 0 0 16px;
-    }
-    nav a.active {
-        font-weight: bold;
-        color: #f4a261;
-    }
-    nav a.active:not(:hover) svg, nav a.active:not(:hover) svg * {
-        fill: #f4a261;
-    }
-    nav a:hover {
-        color: white;
-    }
+nav .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .intro img {
+    width: 100%;
+    max-height: 128px;
+    max-width: 128px;
+    border-radius: 50%;
+    margin: 0 0 16px 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+}
+
+nav .intro label {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+nav .intro .caption {
+    font-style: italic;
+    color: #555;
+    margin: 8px 0;
+}
+
+nav .intro .icon-label {
+    margin-bottom: 16px;
+}
+
+nav .menu-list ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav .menu-list li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav .menu-list a {
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px 0;
+    background-color: rgba(0, 0, 0, .05);
+    width: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #555;
+}
+
+nav .menu-list a:hover {
+    color: #2292A4;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+nav .menu-list a:hover svg, nav .menu-list a:hover svg * {
+    fill: #2292A4;
+}
+
+nav .menu-list a svg {
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+}
+
+nav .menu-list a svg, nav .menu-list a svg * {
+    fill: #555;
+    color: #555;
+}
+
+nav .menu-list a.active {
+    color: white;
+    background-color: #2292A4;
+}
+
+nav .menu-list a.active:not(:hover) {
+    color: white;
+}
+
+nav .menu-list a.active svg, nav .menu-list a.active svg * {
+    fill: white;
+}
+
+nav .menu-list a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav .menu-list .list-header {
+    width: 100%;
+    font-weight: bold;
+    font-size: 80%;
+    color: #555;
+    margin-top: 32px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu-list .list-header svg, nav .menu-list .list-header svg * {
+    fill: #555;
 }
