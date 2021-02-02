@@ -15,6 +15,9 @@ const Home = () => {
 				Outside of work, I am passionate about music, plants, travel, fitness, cooking, and community develoment.
 				You can browse my portfolios to check out some of my projects.
 			</p>
+			<p>
+				I am currently finishing some major projects and will be updating this site in early 2021.
+			</p>
 		</div>
 	);
 };

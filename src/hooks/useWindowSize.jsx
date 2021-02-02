@@ -1,9 +1,9 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-const BREAK_POINT = 512;
+const BREAK_POINT = 720;
 
-export const useIsMobile = useMediaQuery({ query: `(min-width: ${BREAK_POINT}px)` });
+export const useIsMobile = () => !useMediaQuery({ query: `(min-width: ${BREAK_POINT}px)` });
 
 export const Mobile = ({ children }) => {
 	const isMobile = useIsMobile();

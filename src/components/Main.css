@@ -1,4 +1,12 @@
 main {
     overflow-y: auto;
-    padding-top: 32px;
+    padding: 16px;
+}
+
+@media(min-width: 720px) {
+    main {
+        overflow-y: auto;
+        padding: unset;
+        padding-top: 32px;
+    }
 }
